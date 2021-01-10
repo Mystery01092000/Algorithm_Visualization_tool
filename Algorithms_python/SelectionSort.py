@@ -9,3 +9,4 @@ class SelectionSort:
 
             array[i], array[idx] = array[idx], array[i]
 
+        return array
