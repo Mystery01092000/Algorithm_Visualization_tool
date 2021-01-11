@@ -1,6 +1,5 @@
 import sys
 from datetime import time
-
 import pygame
 
 from Algorithms_python import Algorithms
@@ -26,16 +25,19 @@ dimensions = [1024, 512]
 
 algorithms = {"SelectionSort": SelectionSort(), "BubbleSort": BubbleSort(), "InsertionSort": InsertionSort(), "MergeSort": MergeSort(), "QuickSort": QuickSort()}
 
-pygame.init()
-display = pygame.display.set_mode((dimensions[0], dimensions[1]))
-
-display.fill(pygame.Color("#a48be0"))
 
 if len(sys.argv) > 1:
     if sys.argv[1] == "list":
         for key in algorithms.keys(): print(key, end=" ")
         print("")
         sys.exit(0)
+
+pygame.init()
+display = pygame.display.set_mode((dimensions[0], dimensions[1]))
+
+display.fill(pygame.Color("#a48be0"))
+
+
 
 def check_events():
     for event in pygame.event.get():
@@ -64,9 +66,19 @@ def keep_open(algorithm, display, time):
         pygame.display.update()
 
 def visualizer():
-    print("Select an algorithm")
-
-
+    if len(sys.argv) < 2:
+        print("Please select a sorting algorithm.")
+    else:
+        try:
+            algorithm = algorithms[sys.argv[1]]  # Pass the algorithm selected
+            try:
+                time_elapsed = algorithm.run()[1]
+                keep_open(algorithm, display, time_elapsed)
+                pass
+            except:
+                pass
+        except:
+            print("Error.")
 
 if __name__ == "__main__":
     visualizer()

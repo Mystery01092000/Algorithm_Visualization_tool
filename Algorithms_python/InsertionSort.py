@@ -1,14 +1,19 @@
-class InsertionSort:
+from Algorithms_python.Algorithms import Algorithms
 
-    def algorithm(self, array):
-        for i in range(len(array)):
-            cur = array[i]
+
+class InsertionSort(Algorithms):
+
+    def __init__(self):
+        super().__init__("InsertionSort")
+
+    def algorithm(self):
+        for i in range(len(self.array)):
+            cur = self.array[i]
             idx = i
 
-            while idx > 0 and array[idx-1] > cur:
-                array[idx] = array[idx-1]
+            while idx > 0 and self.array[idx-1] > cur:
+                self.array[idx] = self.array[idx-1]
                 idx -= 1
 
-            array[idx] = cur
-
-        return array
+            self.array[idx] = cur
+            self.update_display(self.array[idx], self.array[i])

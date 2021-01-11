@@ -1,8 +1,15 @@
-class QuickSort:
+from Algorithms_python.Algorithms import Algorithms
 
-    def algorithm(self, array, start=0, end=0):
-        end = len(array) - 1
 
+class QuickSort(Algorithms):
+
+    def __init__(self):
+        super().__init__("QuickSort")
+
+    def algorithm(self, array=[], start=0, end=0):
+        if array == []:
+            array = self.array
+            end = len(array) - 1
         if start < end:
             pivot = self.partition(array,start,end)
             self.algorithm(array,start,pivot-1)
@@ -16,5 +23,5 @@ class QuickSort:
                 i += 1
                 if i < j:
                     array[i], array[j] = array[j], array[i]
-
+                    self.update_display(array[i], array[j])
         return i
