@@ -1,13 +1,10 @@
-# Python implementation of the
-# Sorting visualiser: Insertion Sort
-
-# Imports
 import pygame
 import random
 import time
 
 pygame.font.init()
 startTime = time.time()
+
 # Total window
 screen = pygame.display.set_mode(
     (900, 650)
@@ -15,13 +12,13 @@ screen = pygame.display.set_mode(
 
 # Title and Icon
 pygame.display.set_caption(
-    "SORTING VISUALISER"
+    "WELCOME TO SORTING VISUALISER"
 )
 
 # Uncomment below lines for setting
 # up the icon for the visuliser
-# img = pygame.image.load('sorticon.png')
-# pygame.display.set_icon(img)
+#img = pygame.image.load('sorticon.png')
+#pygame.display.set_icon(img)
 
 # Boolean variable to run
 # the program in while loop
