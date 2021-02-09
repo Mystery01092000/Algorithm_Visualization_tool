@@ -23,18 +23,6 @@ screen = pygame.display.set_mode(
 
 # Title and Icon
 pygame.display.set_caption("SORTING VISUALISER")
-
-def generate_arr():
-    for i in range(1, 151):
-        arr_clr[i] = clr[0]
-        array[i] = random.randrange(1, 100)
-
-    # Intially generate a array
-
-
-generate_arr()
-
-
 run = True
 
 # Window size and some initials
@@ -47,6 +35,19 @@ clr = [(0, 204, 102), (255, 0, 0), \
        (0, 0, 153), (255, 102, 0)]
 fnt = pygame.font.SysFont("comicsans", 30)
 fnt1 = pygame.font.SysFont("comicsans", 20)
+
+
+def generate_arr():
+    for i in range(1, 151):
+        arr_clr[i] = clr[0]
+        array[i] = random.randrange(1, 100)
+
+    # Intially generate a array
+
+
+generate_arr()
+
+
 
 def draw():
     # Text should be rendered
