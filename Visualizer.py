@@ -1,3 +1,6 @@
+from visual_bubblesort import bubbleSort
+from visual_insertionsort import insertionSort
+from visual_mergesort import mergesort
 from visual_quicksort import quicksort
 
 import pygame
@@ -90,10 +93,17 @@ if __name__ == "__main__":
             if event.type == pygame.QUIT:
                 run = False
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_r:
+                if event.key == pygame.K_R:
                     generate_arr()
-                if event.key == pygame.K_RETURN:
+                if event.key == pygame.K_1:
                     quicksort(array, 1, len(array) - 1)
+                if event.key == pygame.K_2:
+                    mergesort(array, 1, len(array) - 1)
+                if event.key == pygame.K_2:
+                    insertionSort(array)
+                if event.key == pygame.K_3:
+                    bubbleSort(array)
+
         draw()
         pygame.display.update()
 

@@ -58,7 +58,7 @@ def refill():
 
 
 # Sorting Algorithm: Insertion sort
-def insertionSort(array):
+def bubbleSort(array):
     # for i in range(1, len(array)):
     #     pygame.event.pump()
     #     refill()
