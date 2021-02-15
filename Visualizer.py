@@ -1,16 +1,5 @@
 from visual_quicksort import quicksort
 
-print("WELCOME TO SORTING VISUALIZER")
-
-print("ALGORITHMS WE ARE DEALING WITH : ")
-print('''
-    1. Bubble sort
-    2. Insertion sort
-    3. Selection sort
-    4. Merge sort
-    5. Quick sort
-
-''')
 import pygame
 import random
 
@@ -79,7 +68,17 @@ def draw():
     # Program should be run
 
 if __name__ == "__main__":
-    print("WECLOME TO SORTING VISUALIZER")
+    print("WELCOME TO SORTING VISUALIZER")
+
+    print("ALGORITHMS WE ARE DEALING WITH : ")
+    print('''
+        1. Bubble sort
+        2. Insertion sort
+        3. Selection sort
+        4. Merge sort
+        5. Quick sort
+
+    ''')
     while run:
         # background
         screen.fill((255, 255, 255))

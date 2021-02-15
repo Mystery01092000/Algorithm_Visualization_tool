@@ -2,29 +2,31 @@ import pygame
 import sys
 
 
-pygame.init()
+pygame.font.init()
 
+# Total window
+screen = pygame.display.set_mode(
+    (900, 650)
+)
 
-res = (720, 720)
-
-
-screen = pygame.display.set_mode(res)
+# Title and Icon
+pygame.display.set_caption("SORTING VISUALISER")
 
 
 color = (255, 255, 255)
 
 
-color_light = (170, 170, 170)
+color_light = (0, 0, 0)
 
 
 color_dark = (100, 100, 100)
 
-width = screen.get_width()
+width = 900
 
-height = screen.get_height()
+height = 600
 
 
-smallfont = pygame.font.SysFont('Corbel', 35)
+smallfont = pygame.font.SysFont('Corbel', 40)
 
 text = smallfont.render('quit', True, color)
 
@@ -41,7 +43,7 @@ while True:
             if width / 2 <= mouse[0] <= width / 2 + 140 and height / 2 <= mouse[1] <= height / 2 + 40:
                 pygame.quit()
 
-    screen.fill((60, 25, 60))
+    screen.fill((0, 0, 60))
 
     mouse = pygame.mouse.get_pos()
 
