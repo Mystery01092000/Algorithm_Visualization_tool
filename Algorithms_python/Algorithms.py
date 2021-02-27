@@ -9,8 +9,8 @@ class Algorithms:
         self.name = name
 
     def update_display(self, swap1=None, swap2=None):
-            import Visualizer
-            Visualizer.update(self, swap1, swap2)
+            import main
+            main.update(self, swap1, swap2)
 
     def run(self):
         self.start_time = time.time()
