@@ -70,11 +70,10 @@ def draw():
 
     # Program should be run
 
-if __name__ == "__main__":
-    print("WELCOME TO SORTING VISUALIZER")
+print("WELCOME TO SORTING VISUALIZER")
 
-    print("ALGORITHMS WE ARE DEALING WITH : ")
-    print('''
+print("ALGORITHMS WE ARE DEALING WITH : ")
+print('''
         1. Bubble sort
         2. Insertion sort
         3. Selection sort
@@ -82,6 +81,9 @@ if __name__ == "__main__":
         5. Quick sort
 
     ''')
+
+if __name__ == "__main__":
+
     while run:
         # background
         screen.fill((255, 255, 255))
@@ -93,16 +95,16 @@ if __name__ == "__main__":
             if event.type == pygame.QUIT:
                 run = False
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_R:
-                    generate_arr()
-                if event.key == pygame.K_1:
-                    quicksort(array, 1, len(array) - 1)
-                if event.key == pygame.K_2:
-                    mergesort(array, 1, len(array) - 1)
-                if event.key == pygame.K_2:
+                if event.key == pygame.K_r:
+                   generate_arr()
+                if event.key == pygame.K_m:
+                    mergesort(array, 0, 0)
+                if event.key == pygame.K_i:
                     insertionSort(array)
-                if event.key == pygame.K_3:
+                if event.key == pygame.K_b:
                     bubbleSort(array)
+                if event.key == pygame.K_q:
+                    quicksort(array, 0, 0)
 
         draw()
         pygame.display.update()

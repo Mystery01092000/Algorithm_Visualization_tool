@@ -125,23 +125,23 @@ def draw():
     # Program should be run
 
 
-# continuously to keep the window open
-while run:
-    # background
-    screen.fill((255, 255, 255))
-
-    # Event handler stores all event
-    for event in pygame.event.get():
-
-        # If we click Close button in window
-        if event.type == pygame.QUIT:
-            run = False
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_r:
-                generate_arr()
-            if event.key == pygame.K_RETURN:
-                quicksort(array, 1, len(array) - 1)
-    draw()
-    pygame.display.update()
-
-pygame.quit()
+# # continuously to keep the window open
+# while run:
+#     # background
+#     screen.fill((255, 255, 255))
+#
+#     # Event handler stores all event
+#     for event in pygame.event.get():
+#
+#         # If we click Close button in window
+#         if event.type == pygame.QUIT:
+#             run = False
+#         if event.type == pygame.KEYDOWN:
+#             if event.key == pygame.K_r:
+#                 generate_arr()
+#             if event.key == pygame.K_RETURN:
+#                 quicksort(array, 1, len(array) - 1)
+#     draw()
+#     pygame.display.update()
+#
+# pygame.quit()
