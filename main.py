@@ -40,7 +40,6 @@ def generate_arr():
 generate_arr()
 
 
-
 def draw():
     # Text should be rendered
     txt = fnt.render("SORT : PRESS 'ENTER'", \
@@ -70,6 +69,7 @@ def draw():
 
     # Program should be run
 
+
 print("WELCOME TO SORTING VISUALIZER")
 
 print("ALGORITHMS WE ARE DEALING WITH : ")
@@ -96,14 +96,14 @@ if __name__ == "__main__":
                 run = False
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_r:
-                   generate_arr()
-                if event.key == pygame.K_m:
+                    generate_arr()
+                elif event.key == pygame.K_m:
                     mergesort(array, 0, 0)
-                if event.key == pygame.K_i:
+                elif event.key == pygame.K_i :
                     insertionSort(array)
-                if event.key == pygame.K_b:
+                elif event.key == pygame.K_b:
                     bubbleSort(array)
-                if event.key == pygame.K_q:
+                elif event.key == pygame.K_q:
                     quicksort(array, 0, 0)
 
         draw()
