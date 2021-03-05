@@ -31,6 +31,7 @@ def main_menu():
 
         button_1 = pygame.Rect(50, 100, 200, 50)
         button_2 = pygame.Rect(50, 200, 200, 50)
+        button_3 = pygame.Rect(50, 10, 100, 50)
         if button_1.collidepoint((mx, my)):
             if click:
                 game()
@@ -39,6 +40,7 @@ def main_menu():
                 options()
         pygame.draw.rect(screen, (255, 0, 0), button_1)
         pygame.draw.rect(screen, (255, 0, 0), button_2)
+        pygame.draw.rect(screen, (255, 0, 0), button_3)
 
         click = False
         for event in pygame.event.get():
